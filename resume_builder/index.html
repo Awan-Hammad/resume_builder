@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resume Builder</title>
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <div class="container">
+
+      <div id="form" class="form">
+
+         <h3>Fill resume info</h3>
+
+         <div class="box">
+            <p>Name</p>
+            <input type="text" id="name" maxlength="40" placeholder="Hammad">
+         </div>
+
+         <div class="box">
+            <p>Number</p>
+            <input type="text" id="phone" placeholder="+92..."
+               oninput="if(this.value.length > 13) this.value = this.value.slice(0, 13)">
+         </div>
+
+         <div class="box">
+            <p>Email</p>
+            <input type="email" id="email" maxlength="50" placeholder="@gmail.com">
+         </div>
+
+         <div class="box">
+            <p>Address</p>
+            <input type="text" id="address" maxlength="50" placeholder="City, Country">
+         </div>
+
+         <div class="box">
+            <p>Profile</p>
+            <input type="file" id="photo" accept="image/*">
+         </div>
+
+         <div class="box">
+            <p>Objective</p>
+            <textarea id="objective" maxlength="250" rows="3" placeholder="Write your career objective..."></textarea>
+         </div>
+
+         <div class="box">
+            <p>Education</p>
+            <textarea id="education" maxlength="300" rows="3" placeholder="Degree / College / Year"></textarea>
+         </div>
+
+         <div class="box">
+            <p>Skills (upto 5)</p>
+            <input type="text" max="40" placeholder="add a skill..." id="skill-input">
+            <button type="button" id="add-skill" class="btn">add</button>
+            <ul id="skill-list"></ul>
+         </div>
+
+         <div class="box">
+            <p>Experience</p>
+            <textarea id="experience" maxlength="350" rows="3"
+               placeholder="Company / Role / Description / Duration"></textarea>
+         </div>
+
+         <div class="box">
+            <p>Languages</p>
+            <input type="text" id="languages" maxlength="100" placeholder="Comma seperated">
+         </div>
+
+         <div class="box">
+            <p>Projects (upto 5)</p>
+            <input type="text" max="40" placeholder="add a project..." id="project-input">
+            <button type="button" id="add-project" class="btn">add</button>
+            <ul id="project-list"></ul>
+         </div>
+
+         <button type="button" id="downloadPdf" class="btn">download PDF</button>
+
+      </div>
+
+      <div id="resume" class="preview">
+
+         <div class="resume-header">
+            <div>
+               <h3 id="preview-name">Your name</h3>
+               <p><i class="fas fa-phone"></i> <span id="preview-phone">your number</span></p>
+               <p><i class="fas fa-envelope"></i> <span id="preview-email">your email</span></p>
+               <p><i class="fas fa-map-marker-alt"></i> <span id="preview-address">your address</span></p>
+            </div>
+            <div id="preview-photo" class="photo"></div>
+         </div>
+
+         <div class="box">
+            <h3>Objective</h3>
+            <p id="preview-objective">your career objective goes here...</p>
+         </div>
+
+         <div class="box">
+            <h3>Education</h3>
+            <p id="preview-education">your education details...</p>
+         </div>
+
+         <div class="box">
+            <h3>Skills</h3>
+            <ul id="preview-skills">your skills...</ul>
+         </div>
+
+         <div class="box">
+            <h3>Experience</h3>
+            <p id="preview-experience">your experience details...</p>
+         </div>
+
+         <div class="box">
+            <h3>languages</h3>
+            <p id="preview-languages">English, Urdu...</p>
+         </div>
+
+         <div class="box">
+            <h3>projects</h3>
+            <ul id="preview-projects">your projects...</ul>
+         </div>
+
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- custom pdf convertor link  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>
